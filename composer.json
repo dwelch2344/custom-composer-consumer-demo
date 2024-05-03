@@ -1,0 +1,35 @@
+{
+    "name": "welch/composer-demo",
+    "autoload": {
+        "psr-4": {
+            "Welch\\ComposerDemo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "David Welch",
+            "email": "david@davidwelch.co"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://registry.dev.nes.herodevs.com/composer/repository"
+        }
+    ],
+    "config": {
+        "secure-http": false
+    },
+    "require": {
+        "neverendingsupport/drupal7": "7.100.1-ALPHA1+7.100:drupal"
+    },
+
+    "notes": {
+        "scratch": [
+            {
+                "type": "composer",
+                "url": "http://localhost:3010/composer/repository"
+            }
+        ]
+    }
+}

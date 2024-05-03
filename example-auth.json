@@ -1,0 +1,5 @@
+{
+  "bearer": {
+    "registry.dev.nes.herodevs.com": "<your access token here>"
+  }
+}

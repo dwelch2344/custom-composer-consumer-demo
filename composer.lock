@@ -1,0 +1,32 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d8e25284d996fa71010a5ee3f2e19d0f",
+    "packages": [
+        {
+            "name": "neverendingsupport/drupal7",
+            "version": "7.100.1-ALPHA1+7.100:drupal",
+            "dist": {
+                "type": "zip",
+                "url": "http://registry.dev.nes.herodevs.com/composer/pkg/neverendingsupport/drupal7/7.100.1-ALPHA1+7.100:drupal/release.zip",
+                "reference": "master",
+                "shasum": ""
+            },
+            "type": "library"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "neverendingsupport/drupal7": 15
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}
