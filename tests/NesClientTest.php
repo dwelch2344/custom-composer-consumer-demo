@@ -26,20 +26,32 @@ class NesClientTest extends TestCase
     $this->assertNotEmpty($result->reportId);
   }
 
-  public function testInsights()
+  public function testUnknownModule()
   {
     $reports = $this->client->getPackageAdvisories(['drupal_7']);
+    $this->assertNotEmpty($reports);
+
     $oracle = new NES\drupal\NesDrupalOracle($reports);
-
-
-    // get the reports for all modules
-    $reports = array_map(function ($module) use ($oracle) {
-      return $oracle->getReport($module);
-    }, $oracle->modules);
-
-    // sample the data
-    error_log(print_r(json_encode($reports), true));
+    $report = $oracle->getReport('foobarbaz');
+    $this->assertNull($report);
   }
+
+  // public function testInsights()
+  // {
+  //   $reports = $this->client->getPackageAdvisories(['drupal_7']);
+  //   $this->assertNotEmpty($reports);
+
+  //   $oracle = new NES\drupal\NesDrupalOracle($reports);
+
+
+  //   // get the reports for all modules
+  //   $reports = array_map(function ($module) use ($oracle) {
+  //     return $oracle->getReport($module);
+  //   }, $oracle->modules);
+
+  //   // sample the data
+  //   error_log(print_r(json_encode($reports), true));
+  // }
 
   public function testClassExists()
   {

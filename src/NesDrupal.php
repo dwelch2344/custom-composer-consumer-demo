@@ -18,7 +18,10 @@ class NesDrupalOracle
   public function getReport(string $moduleId)
   {
     if (!isset($this->reports[$moduleId])) {
-      $this->reports[$moduleId] = $this->simplifyReport($moduleId, $this->mapping[$moduleId]);
+      $this->reports[$moduleId] =
+        in_array($moduleId, $this->modules)
+        ? $this->simplifyReport($moduleId, $this->mapping[$moduleId])
+        : null;
     }
     return $this->reports[$moduleId];
   }
