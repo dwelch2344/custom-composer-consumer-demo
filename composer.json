@@ -2,8 +2,11 @@
     "name": "welch/composer-demo",
     "autoload": {
         "psr-4": {
-            "Welch\\ComposerDemo\\": "src/"
+            "NES\\client\\": "src/"
         }
+    },
+    "config": {
+        "secure-http": false
     },
     "authors": [
         {
@@ -11,19 +14,6 @@
             "email": "david@davidwelch.co"
         }
     ],
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://registry.dev.nes.herodevs.com/composer/repository"
-        }
-    ],
-    "config": {
-        "secure-http": false
-    },
-    "require": {
-        "neverendingsupport/drupal7": "7.100.1-ALPHA1+7.100:drupal"
-    },
-
     "notes": {
         "scratch": [
             {
@@ -31,5 +21,22 @@
                 "url": "http://localhost:3010/composer/repository"
             }
         ]
+    },
+
+
+
+    "require": {
+        "neverendingsupport/drupal7": "7.100.1-ALPHA1+7.100:drupal",
+        "softonic/graphql-client": "^3.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://registry.dev.nes.herodevs.com/composer/repository"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^11.1",
+        "spatie/phpunit-watcher": "^1.24"
     }
 }

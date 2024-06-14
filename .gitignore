@@ -1,3 +1,4 @@
 vendor
 .envrc
 auth.json
+.phpunit.result.cache
